@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 
-for character in range(97, 123):
-    print(f"{chr(character)}", end='')
+print(''.join(chr(character) for character in range(97, 123)))
