@@ -16,14 +16,15 @@ def roman_to_int(roman_string):
     }
     total = 0
 
-    for idx in range(len(roman_string)):
-        if roman_numerals.get(roman_string[idx], 0) == 0:
+    for p in range(len(roman_string)):
+        if roman_numerals.get(roman_string[p], 0) == 0:
             return 0
 
-        if (idx != (len(roman_string) - 1) and
-                roman_numerals[roman_string[idx]] < roman_numerals[roman_string[idx + 1]]):
-            total += roman_numerals[roman_string[idx]] * -1
+        if (p != (len(roman_string) - 1) and
+                roman_numerals[roman_string[p]] < roman_numerals[roman_string[p + 1]]):
+            total += roman_numerals[roman_string[p]] * -1
         else:
-            total += roman_numerals[roman_string[idx]]
+            total += roman_numerals[roman_string[p]]
+    
     return total
 
