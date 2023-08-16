@@ -15,9 +15,8 @@ def roman_to_int(roman_string):
         "M": 1000
     }
     total = 0
-    idx = 0
 
-    while idx < len(roman_string):
+    for idx in range(len(roman_string)):
         if roman_numerals.get(roman_string[idx], 0) == 0:
             return 0
 
@@ -26,8 +25,5 @@ def roman_to_int(roman_string):
             total += roman_numerals[roman_string[idx]] * -1
         else:
             total += roman_numerals[roman_string[idx]]
-        
-        idx += 1
-
     return total
 
