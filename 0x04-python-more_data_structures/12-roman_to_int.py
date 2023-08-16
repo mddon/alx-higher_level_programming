@@ -27,4 +27,3 @@ def roman_to_int(roman_string):
             total += roman_numerals[roman_string[p]]
     
     return total
-
