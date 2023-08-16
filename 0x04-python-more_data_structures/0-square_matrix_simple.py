@@ -2,4 +2,4 @@
 
 def square_matrix_simple(matrix=[]):
 
-    return ([list(map(lambda k: k * k, row)) for row in matrix]index)
+    return ([list(map(lambda k_element: k_element * k_element, row)) for row in matrix])
