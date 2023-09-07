@@ -3,7 +3,7 @@
 
 def add_integer(a, b=98):
     """
-    Return the integer sum of  two numbers, a and b.
+    Return the integer sum of a and b.
     Before a and b are summed, float arguments are type-casted to int.
     Raises:
         TypeError: If either of a or b is a non-integer and non-float.
