@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Defines an integer addition function."""
+""" This script defines an integer addition function."""
 
 
 def add_integer(a, b=98):
     """Return the integer addition of a and b.
-    Float arguments are typecasted to ints before addition is performed.
+    Before a and b are summed, float arguments are type-casted to int.
     Raises:
         TypeError: If either of a or b is a non-integer and non-float.
     """
