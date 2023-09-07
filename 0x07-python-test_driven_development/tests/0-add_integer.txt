@@ -1,0 +1,64 @@
+# Module: 0-add_integer.py
+
+This module defines the `add_integer` function, which performs integer addition.
+
+## Function Signature:
+
+```python
+def add_integer(a, b=98):
+    """
+    Return the integer sum of two numbers, a and b.
+
+    Args:
+        a (int or float): The first number.
+        b (int or float, optional): The second number. Defaults to 98.
+
+    Returns:
+        int: The integer sum of a and b, with the result type-casted to int.
+
+    Raises:
+        TypeError: If either a or b is not an integer or float.
+        OverflowError: If infinity is provided as an argument.
+        ValueError: If NaN (Not-a-Number) is provided as an argument.
+    """
+USAGE
+
+Integer Addition(Positive and Negativ)
+>>> add_integer(5, 3)
+8
+>>> add_integer(-10, -7)
+-17
+Float Adition (with type cssting)
+>>> add_integer(2.5, 3.7)
+5
+>>> add_integer(1.25, -1.09)
+0
+Integer Addition (with Default Value of b)
+>>> add_integer(42)
+140
+Error Handling
+# Non-integer and non-float values
+>>> add_integer("hello", 3)
+TypeError: a must be an integer or float
+
+>>> add_integer(2, "world")
+TypeError: b must be an integer or float
+
+>>> add_integer(None)
+TypeError: a must be an integer or float
+
+>>> add_integer(2.3, None)
+TypeError: b must be an integer or float
+
+# Infinity and NaN values
+>>> add_integer(float('inf'))
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(2, float('inf'))
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('nan'))
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(2, float('nan'))
+ValueError: cannot convert float NaN to integer
