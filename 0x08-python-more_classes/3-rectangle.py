@@ -1,16 +1,12 @@
 #!/usr/bin/python3
 """This script defines a Rectangle class."""
+
 class Rectangle:
     """Represents a rectangle.
-
-    Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
     """
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
-
         Args:
             width (int, optional): The width of the new rectangle. Defaults to 0.
             height (int, optional): The height of the new rectangle. Defaults to 0.
@@ -26,13 +22,6 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """Set the width of the Rectangle.
-
-        Args:
-            value (int): The width value to set.
-
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is negative.
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -48,13 +37,6 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Set the height of the Rectangle.
-
-        Args:
-            value (int): The height value to set.
-
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is negative.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -64,25 +46,16 @@ class Rectangle:
 
     def area(self):
         """Calculate and return the area of the Rectangle.
-
-        Returns:
-            int: The area of the Rectangle.
         """
         return self.__width * self.__height
 
     def perimeter(self):
         """Calculate and return the perimeter of the Rectangle.
-
-        Returns:
-            int: The perimeter of the Rectangle.
         """
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
         """Return a string representation of the Rectangle.
-
-        The Rectangle is represented using '#' characters.
-
         Returns:
             str: A string representation of the Rectangle.
         """
