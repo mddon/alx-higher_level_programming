@@ -1,4 +1,3 @@
-    """
     Multiply two matrices.
 
     This function takes two matrices, m_a and m_b, and multiplies them together.
@@ -118,4 +117,3 @@
         ... except ValueError as ex:
         ...     print(ex.args[0])
         "m_a and m_b can't be multiplied"
-    """
