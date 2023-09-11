@@ -11,6 +11,6 @@ i    """Check if an object is an instance or inherited instance of a class.
         If obj is an instance or inherited instance of a_class - True.
         Otherwise - False.
     """
-    if isinstance(obj, a_class):`
+    if isinstance(obj, a_class):
         return True
     return False
