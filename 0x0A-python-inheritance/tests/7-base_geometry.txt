@@ -1,4 +1,3 @@
-"""
 1. Importing the function from the module:
    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
@@ -111,5 +110,3 @@
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
-"""
-
