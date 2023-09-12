@@ -23,15 +23,10 @@ class Student:
 
     def to_json(self, attrs=None):
         """Get a dictionary representation of the Student.
-
-        Args:
-            attrs (list, optional): List of attribute names to include in the dictionary.
-                If None, all attributes are included.
-
         Returns:
             dict: A dictionary representation of the Student object.
 
         """
-        if attrs is None:
-            return self.__dict_
-        return {key: value for key, value in self.__dict__.items() if key in attrs}_
+        if isinstance(attrs, list) and all(isinstance(ele, str) for ele in attrs):
+           return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+        return self.__dict__
