@@ -10,8 +10,8 @@ def append_after(filename="", search_string="", new_string=""):
         new_string (str): The string to insert after each line containing the search string.
     """
     content = ""
-    with open(filename) as fr:
-        for line in fr:
+    with open(filename) as r:
+        for line in r:
             content += line
             if search_string in line:
                content += new_string
