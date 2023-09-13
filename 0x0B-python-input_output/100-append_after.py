@@ -9,11 +9,11 @@ def append_after(filename="", search_string="", new_string=""):
         search_string (str): The string to search for within each line.
         new_string (str): The string to insert after each line containing the search string.
     """
-    modified_content = ""
-    with open(filename) as file_reader:
-        for line in file_reader:
-            modified_content += line
+    content = ""
+    with open(filename) as fr:
+        for line in fr:
+            content += line
             if search_string in line:
-                modified_content += new_string
+               content += new_string
     with open(filename, "w") as file_writer:
-        file_writer.write(modified_content)
+        file_writer.write(content)
