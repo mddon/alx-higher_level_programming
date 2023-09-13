@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a class Student."""
+""Script that dDefines a class Student."""
 
 
 class Student:
@@ -20,13 +20,13 @@ class Student:
     def to_json(self, attrs=None):
         """Get a dictionary representation of the Student.
 
-        If attrs is a list of strings, represents only those attributes
+        If attrs is a list of strings, represent only those attributes
         included in the list.
 
         Args:
             attrs (list): (Optional) The attributes to represent.
         """
-
-        if isinstance(attrs, list) and all(isinstance(ele, str) for ele in attrs):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+        if (type(attrs) == list and
+                all(type(ele) == str for ele in attrs)):
+            return {ky: getattr(self, ky) for ky in attrs if hasattr(self, ky)}
         return self.__dict__
