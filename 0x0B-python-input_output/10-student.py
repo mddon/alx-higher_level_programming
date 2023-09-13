@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""Script that dDefines a class Student."""
+"""Script that dDefines a class Student."""
 
 
 class Student:
