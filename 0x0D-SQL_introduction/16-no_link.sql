@@ -1,6 +1,7 @@
--- Select scores and count the number of occurrences in 'second_table'
+-- Select scores and names from 'second_table' where the name is not null
 
 
-SELECT score, COUNT(1) AS number FROM second_table
-GROUP BY score
-ORDER BY number DESC;
+SELECT score, name
+FROM second_table
+HAVING name IS NOT NULL
+ORDER BY score DESC;
