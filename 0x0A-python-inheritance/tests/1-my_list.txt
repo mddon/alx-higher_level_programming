@@ -1,0 +1,65 @@
+Test cases for the "1-my_list" module
+
+
+1. Importing the class from the module:
+   >>> MyList = __import__("1-my_list").MyList
+
+2. Checking for module docstring:
+   >>> m = __import__("1-my_list").__doc__
+   >>> len(m) > 1
+   True
+
+3. Checking for class docstring:
+   >>> c = __import__("1-my_list").MyList.__doc__
+   >>> len(c) > 1
+   True
+
+4. Checking for method docstring:
+   >>> f = __import__("1-my_list").MyList.print_sorted.__doc__
+   >>> len(f) > 1
+   True
+
+5. Checking given test case:
+   >>> my_list = MyList()
+   >>> my_list.append(10)
+   >>> my_list.append(42)
+   >>> my_list.append(-5)
+   >>> my_list.append(0)
+   >>> my_list.append(99)
+   >>> print(my_list)
+   [10, 42, -5, 0, 99]
+   >>> my_list.print_sorted()
+   [-5, 0, 10, 42, 99]
+   >>> print(my_list)
+   [10, 42, -5, 0, 99]
+
+6. Checking negative values:
+   >>> obj2 = MyList()
+   >>> obj2.append(-8)
+   >>> obj2.append(-20)
+   >>> obj2.append(-3)
+   >>> obj2.append(-11)
+   >>> print(obj2)
+   [-8, -20, -3, -11]
+   >>> obj2.print_sorted()
+   [-20, -11, -8, -3]
+
+8. Checking NULL object:
+   >>> obj3 = MyList()
+   >>> obj3.append(NULL)
+   Traceback (most recent call last):
+       ...
+   NameError: name 'NULL' is not defined
+   >>> print(obj3)
+   []
+
+9. Checking NaN object:
+   >>> obj4 = MyList()
+   >>> obj4.append(NaN)
+   Traceback (most recent call last):
+       ...
+   NameError: name 'NaN' is not defined
+   >>> print(obj4)
+   []
+
+Note: These checks are meant for verification purposes and may raise errors or exceptions as part of the testing process.
