@@ -1,4 +1,4 @@
-List all shows without the comedy genre from the 'hbtn_0d_tvshows' database
+--List all shows without the comedy genre from the 'hbtn_0d_tvshows' database
 
 
 SELECT DISTINCT `title`
