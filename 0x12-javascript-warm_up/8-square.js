@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const len= Math.floor(Number(process.argv[2]));
-if (isNaN(length) {
+const length = Math.floor(Number(process.argv[2]));
+if (isNaN(length)) {
   console.log('Missing size');
 } else {
   for (let h = 0; h < length; h++) {
