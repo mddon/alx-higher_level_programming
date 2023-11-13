@@ -1,7 +1,5 @@
 #!/usr/bin/node
-
 const len= Math.floor(Number(process.argv[2]));
-
 if (isNaN(len)) {
   console.log('Missing size');
 } else {
