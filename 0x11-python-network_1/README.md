@@ -1,1 +1,1 @@
-Readme documentation on python newtwork 1 project
+Readme documention on python network project
