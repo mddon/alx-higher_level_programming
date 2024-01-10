@@ -1,1 +1,1 @@
-vascript-web_jquery
+Readme documentation on jquery
